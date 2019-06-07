@@ -1,0 +1,10 @@
+---
+name: Docker Dropbox CLI
+slug: docker-dbxcli
+project: cardboardci
+namespace: []
+description: A command line client for Dropbox built using the Go SDK.
+license:
+  name: MIT
+tags:
+  - docker
