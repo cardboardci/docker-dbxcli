@@ -1,5 +1,12 @@
-FROM alpine:3.10.3
+FROM cardboardci/ci-core:disco
+USER root
+
 COPY rootfs/ /
+
+ADD https://github.com/dropbox/dbxcli/releases/download/v3.0.0/dbxcli-linux-amd64 /usr/local/bin/dbxcli
+RUN chmod +x /usr/local/bin/dbxcli
+
+USER cardboardci
 
 ##
 ## Image Metadata
