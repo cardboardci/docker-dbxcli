@@ -5,7 +5,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 COPY rootfs/ /
 
-ADD https://github.com/dropbox/dbxcli/releases/download/v3.0.0/dbxcli-linux-amd64 /usr/local/bin/dbxcli
+ARG VERSION=3.0.0
+ADD https://github.com/dropbox/dbxcli/releases/download/v${VERSION}/dbxcli-linux-amd64 /usr/local/bin/dbxcli
 RUN chmod +x /usr/local/bin/dbxcli
 
 USER cardboardci
